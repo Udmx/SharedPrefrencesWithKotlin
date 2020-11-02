@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:title="ثبت نام"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:paddingStart="52dp"
+            android:paddingEnd="52dp"
+            android:src="@drawable/img_tutorial"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fullNameEtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:hint="@string/full_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/ic_user_24dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fullNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLength="25"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/emailEtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:hint="@string/email_address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:startIconDrawable="@drawable/ic_mail">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="40"
+                android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:gravity="start"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/sex" />
+        <RadioGroup
+            android:id="@+id/sexRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:orientation="horizontal"
+            android:gravity="start">
+            <RadioButton
+                android:id="@+id/sexMenRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="مرد"/>
+            <RadioButton
+                android:id="@+id/sexWomanRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="زن"/>
+            <RadioButton
+                android:id="@+id/sexNRb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="تمایلی ندارم"/>
+        </RadioGroup>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:text="ذخیره اطلاعات"
+            android:layout_gravity="end"
+            app:icon="@drawable/ic_save_24dp"/>
+    </LinearLayout>
+
+
+</ScrollView>
